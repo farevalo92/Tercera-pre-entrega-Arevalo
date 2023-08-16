@@ -1,0 +1,41 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+
+    Alumnos
+
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <h1>{{titulo}}</h1>
+    
+    
+    <table class="table table-bordered">
+        <thead>
+            <tr class="table table-bordered">
+                <th>ID</th>
+                <th>Nombre del Alumno</th>
+                <th>Apellido del Alumno</th>
+                <th>Edad del Alumno</th>
+                <th>Tutor del Alumno</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for a in alumnos %}
+        <tr>
+            <td>{{ a.id }}</td>
+            <td>{{ a.nombre }}</td>
+            <td>{{ a.apellido }}</td>
+            <td>{{ a.edad }}</td>
+            <td>{{ a.tutor }}</td>
+        </tr>
+
+    {% endfor %}
+        </table>
+        
+    </table>
+
+{% endblock contenido %}

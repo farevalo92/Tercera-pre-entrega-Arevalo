@@ -1,0 +1,25 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+
+    Home
+
+{% endblock titulo %}
+
+{% block contenido %}
+    <h1>Bienvenidos a nuestro Jardin!</h1>
+
+    <h4>Buscar Alumno</h4>
+
+    <form action="/buscar_alumno2" method="get">
+        {% csrf_token %}
+        
+        <p>Patron a buscar en alumnos:<input type="text" name="buscar" id="buscar"></p>>
+        
+        <input type="submit" value="Enviar">
+
+    </form>
+
+{% endblock contenido %}

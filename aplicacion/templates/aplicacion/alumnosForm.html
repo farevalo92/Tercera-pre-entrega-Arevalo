@@ -1,0 +1,25 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+
+    Agregar Alumno
+
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <h1>Agregar Alumno</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Nombre=<input type="text" name="nombre" id="nombre"></p>          
+        <p>Apellido=<input type="text" name="apellido" id="apellido"></p>  
+        <p>Edad=<input type="number" name="edad" id="edad"></p>
+        <p>Tutor=<input type="text" name="tutor" id="tutor"></p>
+        <input type="submit" value="Enviar">
+
+    </form>
+
+{% endblock contenido %}

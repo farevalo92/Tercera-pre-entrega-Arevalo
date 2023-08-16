@@ -1,0 +1,40 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+
+    Eventos
+
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <h1> {{titulo}} </h1>
+    
+    
+    <table class="table table-bordered">
+        <thead>
+            <tr class="table table-bordered">
+                <th>ID</th>
+                <th>Nombre del Evento</th>
+                <th>Fecha</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+
+    {% for e in eventos %}
+        <tr>
+            <td>{{ e.id }}</td>
+            <td>{{ e.nombre }}</td>
+            <td>{{ e.fecha }}</td>
+            
+        </tr>
+
+    {% endfor %}
+        </table>
+        
+    </table>
+
+{% endblock contenido %}

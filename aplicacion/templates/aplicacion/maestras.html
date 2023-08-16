@@ -1,0 +1,41 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+
+    Maestras
+
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <h1>{{titulo}}</h1>
+    
+    
+    <table class="table table-bordered">
+        <thead>
+            <tr class="table table-bordered">
+                <th>ID</th>
+                <th>Nombre de la Maestra</th>
+                <th>Apellido de la Maestra</th>
+                <th>Edad de la Maestra</th>
+                <th>Email de la Maestra</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for m in maestras %}
+        <tr>
+            <td>{{ m.id }}</td>
+            <td>{{ m.nombre }}</td>
+            <td>{{ m.apellido }}</td>
+            <td>{{ m.edad }}</td>
+            <td>{{ m.email }}</td>
+        </tr>
+
+    {% endfor %}
+        </table>
+        
+    </table>
+
+{% endblock contenido %}
